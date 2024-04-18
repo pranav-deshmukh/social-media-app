@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="h-full w-full flex">
-          <div className="w-[400px]">
+          <div className="w-[360px]  ">
             <Menu />
           </div>
-          <div className=" w-full">
+          <div className=" w-[100%] h-screen">
 
           {children}
           </div>

@@ -41,13 +41,23 @@ const PostsPage: FC<PostsPageProps> = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center w-full h-full overflow-auto">
-      <div className="flex flex-col items-center w-full  p-4 ">
-        {posts.map((post) => (
-          <div key={post._id} className="mt-10  w-full p-4  flex justify-center">
-            <Post userName={post.userName} content={post.content} createdAt={post.createdAt} />
-          </div>
-        ))}
+    <div className="flex items-center justify-center w-full h-full bg-slate-300">
+      <div className="w-full h-full overflow-auto">
+        <div className="flex flex-col items-center w-full  p-4 ">
+          {posts.map((post) => (
+            <div
+              key={post._id}
+              className="mt-6  w-full p-4  flex justify-center"
+            >
+              <Post
+                userName={post.userName}
+                content={post.content}
+                createdAt={post.createdAt}
+                postId={post._id}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

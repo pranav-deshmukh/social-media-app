@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { Toaster, toast } from "sonner";
 import Cookies from "js-cookie"
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -152,6 +153,7 @@ export default function Home() {
                     </div>
       <Button type="submit" variant="default" className="mt-3">Submit</Button>
       </form>
+      <p>Already have an account? <Link href="/login">Login</Link></p>
       </div>
 
     </div>
